@@ -31,7 +31,6 @@
          write_discovered_pof/2,
          write_genesis_hash/1,
          write_top_block_hash/1,
-         write_top_block_height/1,
          write_signal_count/2,
          find_block/1,
          find_block_tx_hashes/1,
@@ -48,7 +47,6 @@
          get_genesis_hash/0,
          get_signed_tx/1,
          get_top_block_hash/0,
-         get_top_block_height/0,
          get_block_state/1,
          get_block_state/2,
          get_block_from_micro_header/2
@@ -543,9 +541,6 @@ get_genesis_hash() ->
 
 get_top_block_hash() ->
     get_chain_state_value(top_block_hash).
-
-get_top_block_height() ->
-    get_chain_state_value(top_block_height).
 
 get_block_state(Hash) ->
     get_block_state(Hash, false).
